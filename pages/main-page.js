@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import Cookie from "universal-cookie";
 import Layout from "../components/Layout";
@@ -13,6 +14,18 @@ export default function MainPage() {
   
   return (
     <Layout title="メインページ">
+      <div className="mb-10">
+        <Link href="/blog-page">
+          <a className="bg-indigo-500 mr-8 hover:bg-indigo-600 text-white px-4 py-12 rounded">
+            ブログページ by SSG + ISR
+          </a>
+        </Link>
+        <Link href="/task-page">
+          <a className="bg-gray-500 mr-8 hover:bg-gray-600 text-white px-4 py-12 rounded">
+            タスクページ by SSG + ISR
+          </a>
+        </Link>
+      </div>
       <svg
         className="w-6 h-6 mt-10 cursor-pointer"
         onClick={logout}
