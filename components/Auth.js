@@ -51,7 +51,7 @@ export default function Auth () {
     } else {
       try {
         await fetch(
-          `${process.env.NEXT_PUBLIC_RESTAPI_URL}api/auth/jwt/create`,
+          `${process.env.NEXT_PUBLIC_RESTAPI_URL}api/register/`,
           {
             method: "POST",
             body: JSON.stringify({ username: username, password: password }),
